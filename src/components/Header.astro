@@ -1,17 +1,33 @@
+---
+// You can define props here if needed
+import { Image } from "astro:assets";
+const { activeItemID } = Astro.props;
+---
+
 <div
-  class="sticky lg:hidden top-0 z-30 flex h-16 w-full justify-center bg-opacity-90 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-sm"
+  class="sticky top-0 z-30 flex h-18 w-full justify-center bg-opacity-100 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-md "
 >
-  <div class="navbar">
+  <div class="navbar w-5/6 max-w-[100vw] mx-auto">
     <div class="navbar-start">
-      <label for="my-drawer" class="btn btn-square btn-ghost">
+      <label for="my-drawer" class="btn btn-square btn-ghost hover:bg-[#d6e1db] rounded-full">
+        <Image class="mask mask-circle" format="png" width={100} height={100} src="/HeadShot.png" style="width: 120%; height: 100%;" alt="Profile image" />
+      </label>
+      <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/">William Lamuth</a>
+    </div>
+    <div class="navbar-center">
+    </div>
+    <div class="navbar-end">
+      <div class="hidden lg:flex space-x-4">
+        <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" id="projects" href="/projects">Projects</a></li>
+        <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" id="services" href="/services">About</a></li>
+        <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" id="cv" href="/cv">Resume</a></li>
+      </div>
+
+      <label for="my-drawer" class="block sm:hidden btn btn-square btn-ghost h-auto my-auto">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"
           ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </label>
     </div>
-    <div class="navbar-center">
-      <a class="btn btn-ghost normal-case text-xl" href="/">Manuel Ernesto ⚡️</a>
-    </div>
-    <div class="navbar-end"></div>
   </div>
 </div>
