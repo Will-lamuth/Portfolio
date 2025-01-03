@@ -12,126 +12,150 @@ const last_posts = posts.slice(0, 3);
 
 
 <BaseLayout sideBarActiveItemID="home">
+  <section id="top">
+    <div class="relative bg-[#8db8a8] bg-opacity-100 w-screen h-screen overflow-hidden">
+      <svg class="svg-shadow" preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
+      <defs>
+        <style>
+            @keyframes rotate {
+          0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+            .out-top {
+                animation: rotate 20s linear infinite;
+                transform-origin: 13px 25px;
+            }
+            .in-top {
+                animation: rotate 10s linear infinite;
+                transform-origin: 13px 25px;
+            }
+            .out-bottom {
+                animation: rotate 25s linear infinite;
+                transform-origin: 84px 93px;
+            }
+            .in-bottom {
+                animation: rotate 15s linear infinite;
+                transform-origin: 84px 93px;
+            }
+            /*
+              .out-top, .in-top, .out-bottom, .in-bottom {
+                filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .9));
+            }
 
-  <div class="relative bg-[#8db8a8] bg-opacity-100 w-screen h-screen">
-  
-
-    <!-- 
-  - Single file SVG animation
-  - * can be used as CSS backgroud
-  - * total size is less than 2kb!
-  -->
-  
-    <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
-    
-    <defs>
-      <style>
-          @keyframes rotate {
-        0% {
-                  transform: rotate(0deg);
-              }
-              100% {
-                  transform: rotate(360deg);
-              }
-          }
-          .out-top {
-              animation: rotate 20s linear infinite;
-              transform-origin: 13px 25px;
-          }
-          .in-top {
-              animation: rotate 10s linear infinite;
-              transform-origin: 13px 25px;
-          }
-          .out-bottom {
-              animation: rotate 25s linear infinite;
-              transform-origin: 84px 93px;
-          }
-          .in-bottom {
-              animation: rotate 15s linear infinite;
-              transform-origin: 84px 93px;
-          }
-      </style>
+            .svg-shadow{
+              filter: blur(20px);
+            }
+            */
+        </style>
+        
+      </defs>
+      <path fill="#6A9C89" class="out-top"  d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z"/>
+      <path fill="#3b6e5a" class="in-top" d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z"/>
+      <path fill="#6A9C89" class="out-bottom"  d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z"/>
+      <path fill="#3b6e5a" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"/>
+      </svg>
       
-    </defs>
-    <path fill="#6A9C89" class="out-top" d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z"/>
-    <path fill="#16423C" class="in-top" d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z"/>
-    <path fill="#6A9C89" class="out-bottom" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z"/>
-    <path fill="#16423C" class="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z"/>
-    </svg>
+      <div class="typewriter absolute inset-0 flex flex-col justify-center w-5/6 h-full mx-auto text-left">
+        <h1 class="text-8xl font-bold text-white mb-[3rem]" id="name">Hi, I'm William Lamuth</h1>
+        <p class="text-3xl font-bold text-white w-4/6 mb-[3rem]" id="desc">Current Senior studying Computer Science at Salisbury University with an interest in Web Development and AI.</p>
+        <button class="mb-[7rem] bg-black text-2xl rounded-full w-[10em] h-[3em] text-white font-bold hover:scale-[106%] shadow-xl transition ease-in-out hover:bg-[#292929]" onclick="scrollToSection('projects')">Projects</button>
+      </div>
     
-    <div class="absolute inset-0 flex flex-col items-center justify-center w-[75%] mx-auto text-center">
-      <h1 class="text-7xl font-bold text-white" id="name">Hi, Im William Lamuth</h1>
-      <p class="m-7 text-2xl font-bold text-white" id="desc">Current Senior studying Computer Science at Salisbury university with an interest in Web Development and Ai.</p>
-      <button class="m-7 bg-black text-2xl rounded-full w-[10em] h-[3em] text-white font-bold hover:scale-[108%] hover:shadow-xl transition ease-in-out hover:bg-[#29665d]"
-      >Projects</button>
     </div>
-  
-  </div>
+  </section>
 
+  <section class="sec-2" id="about"> 
     <div class="about">
       <div class="about-A">
-        <div class="w-4/6 mx-auto mt-[4rem]">
-          <h1 class="text-3xl w-full font-bold mb-2 text-black mb-7" id="about-header">About Me</h1>
-          <p class="mb-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-            malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-            pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
+        <div class="A-content w-4/6 mx-auto my-[5rem]">
+          <h1 class="animate relative text-4xl w-full font-bold mb-2 mb-7 text-[#16423c]" id="about-header">About Me<span class="reveal"></span></h1>
+          <p class="animate mb-7 relative">
+            Im a current senior Computer Science major at Salisbury University, with a 
+            focus in AI and minoring in Math and Data Science. My interest include fullstack 
+            web development and AI.
+            <span class="reveal"></span>
           </p>
 
-          <p class="mb-[4rem]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-            malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-            pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
+          <p class="animate relative">
+            I've had the opportunity to work on a variety of exciting projects, from building 
+            custom web pages for local businesses to creating a GIS-based web app to visualize 
+            salinity data in the Chesapeake Bay. I'm eager to apply the knowledge and skills I've 
+            gained to real-world challenges, while continuously seeking opportunities to learn and improve.
+            <span class="reveal"></span>
           </p>
         </div>
       </div>
       <div class="about-B">
-        <div class="w-4/6 mx-auto mt-[4rem]">
-          <h1 class="text-3xl w-full font-bold mb-7 text-black" id="tools-header">Tools Used</h1>
+        <div class="B-content w-4/6 mx-auto my-[5rem]">
+          <h1 class="text-4xl w-full font-bold mb-7 text-[#16423c]" id="tools-header">My Tools</h1>
           <div class="tool-list">
-            <div class="tool hover:scale-[104%]">HTML</div>
-            <div class="tool hover:scale-[104%]">CSS</div>
-            <div class="tool hover:scale-[104%]">Javascript</div>
-            <div class="tool hover:scale-[104%]">Python</div>
-            <div class="tool hover:scale-[104%]">Java</div>
-            <div class="tool hover:scale-[104%]">C++</div>
-            <div class="tool hover:scale-[104%]">PHP</div>
-            <div class="tool hover:scale-[104%]">MySql</div>
-            <div class="tool hover:scale-[104%]">Astro</div>
-            <div class="tool hover:scale-[104%]">Tailwind</div>
+            <div class="animate-tool tool hover:scale-[105%]">HTML</div>
+            <div class="animate-tool tool hover:scale-[105%]">CSS</div>
+            <div class="animate-tool tool hover:scale-[105%]">Javascript</div>
+            <div class="animate-tool tool hover:scale-[105%]">Python</div>
+            <div class="animate-tool tool hover:scale-[105%]">Java</div>
+            <div class="animate-tool tool hover:scale-[105%]">C++</div>
+            <div class="animate-tool tool hover:scale-[105%]">PHP</div>
+            <div class="animate-tool tool hover:scale-[105%]">MySql</div>
+            <div class="animate-tool tool hover:scale-[105%]">Astro</div>
+            <div class="animate-tool tool hover:scale-[105%]">Tailwind</div>
+            <div class="animate-tool tool hover:scale-[105%]">Git</div>
+            <div class="animate-tool tool hover:scale-[105%]">Firebase</div>
+            <div class="animate-tool tool hover:scale-[105%]">VS Code</div>
+            <div class="animate-tool tool hover:scale-[105%]">AWS</div>
           </div>
         </div>
       </div>
     </div>
-  
-  
+  </section>
 
-  <div id="projects" class="mt-20 mb-0 w-5/6 max-w-[100vw] mx-auto">
-    <div class="text-3xl w-full font-bold mb-2 text-black" id="project-header">Projects</div>
-  </div>
-<div class="w-5/6 max-w-[100vw] mx-auto">
-  <HorizontalCard
-    title="SaltCast"
-    img="/SaltCast.png"
-    desc="SaltCast is a salinity management tool that safeguards drinking water, supports sustainable freshwater use, and protects infrastructure from climate change. It combines hydrological models, AI algorithms, and ion-specific data to provide actionable insights."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 2"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Demo Project 3"
-    img="/post_img.webp"
-    desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    url="#"
-  />
-</div>
 
-<script src="../src/js/scroll.js" defer></script>
+  
+    <section id="projects" class="mb-[5rem]">
+      <div class="mt-20 mb-0 w-5/6 max-w-[100vw] mx-auto">
+        <div class="text-4xl w-full font-bold mb-2 text-[#16423c]" id="project-header">Projects</div>
+      </div>
+
+      <div class="w-5/6 max-w-[100vw] mx-auto">
+        <HorizontalCard
+          title="SaltCast"
+          img="/SaltCast1.png"
+          desc="SaltCast is a salinity management tool that safeguards drinking water, supports sustainable freshwater use, and protects infrastructure from climate change. It combines hydrological models, AI algorithms, and ion-specific data to provide actionable insights."
+          url="/SaltCast"
+        >
+        <div class="card-wrap">
+          <div class="card hover:scale-[105%]">HTML</div>
+          <div class="card hover:scale-[105%]">CSS</div>
+          <div class="card hover:scale-[105%]">Javascript</div>
+          <div class="card hover:scale-[105%]">Python</div>
+        </div>
+      </HorizontalCard>
+        <div class="divider my-0"></div>
+        <HorizontalCard
+          title="Demo Project 2"
+          img="/post_img.webp"
+          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          url="#"
+        />
+        <div class="divider my-0"></div>
+        <HorizontalCard
+          title="MOVE4WELLNESS"
+          img="/post_img.webp"
+          desc="A user-friendly Android fitness tracking app for MOVE4WELLNESS and daily use, the app allows users to log their physical activities such as walking, running, or cycling, and track their fitness progress over time, utilizing Android Studio, java and Firebase. The app integrates with Firebase for secure user authentication and cloud-based storage of activity data, ensuring users can access their fitness logs "
+          url="#"
+        >
+        <div class="card-wrap">
+          <div class="card hover:scale-[105%]">Java</div>
+          <div class="card hover:scale-[105%]">Android Studio</div>
+          <div class="card hover:scale-[105%]">Firebase</div>
+        </div>
+        </HorizontalCard>
+        
+      </div>
+    </section>
   
 </BaseLayout>

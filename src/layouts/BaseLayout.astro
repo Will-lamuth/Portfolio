@@ -11,8 +11,6 @@ const {
   image,
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
-  includeSidebar = true,
-  sideBarActiveItemID,
   ogType,
 } = Astro.props;
 ---
@@ -22,6 +20,9 @@ const {
   <head>
     <BaseHead title={title} description={description} image={image} , ogType={ogType} />
     {TRANSITION_API && <ViewTransitions />}
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <script src="../src/js/scroll.js" defer></script>
+    <script src="../src/js/carousel.js" defer></script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
@@ -36,7 +37,6 @@ const {
         </div>
         <Footer />
       </div>
-      <!-- {includeSidebar && <SideBar sideBarActiveItemID={sideBarActiveItemID} />}-->
 
     </div>
   </body>

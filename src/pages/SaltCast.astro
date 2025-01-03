@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+---
+
+<BaseLayout title = "Projects">
+
+    <section class="w-screen h-auto text-left">
+        <div class="w-5/6 mx-auto bg-green">
+          <h1 class="text-5xl w-full font-bold my-[3rem] text-center">SaltCast</h1>
+
+          <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade" style="display: block;">
+              <img src="SaltCast1.png">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="SaltCast2.png">
+            </div>
+          
+            <div class="mySlides fade">
+              <img src="SaltCast3.png">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="SaltCast4.png">
+            </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+
+
+
+          <p class="mb-7 relative">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
+            malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
+            pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
+          </p>
+          <p class="mb-7 relative">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
+            malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
+            pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
+          </p>
+          <p class="mb-7 relative">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
+            malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
+            pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
+          </p>
+        </div>
+    </section>
+
+</BaseLayout>

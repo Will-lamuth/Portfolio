@@ -5,7 +5,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
 <div
-  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[103%]"
+  class="rounded-lg bg-base-100 hover:shadow-2xl transition ease-in-out hover:scale-[103%]"
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
@@ -15,7 +15,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
             src={img}
             width={750}
             height={422}
-            format="webp"
+            format="png"
             alt={title}
             class="max-w-full md:max-w-[13rem] rounded-lg"
           />
@@ -27,6 +27,10 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
           {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
         </h1>
         <p class="py-1 text-1xl">{desc}</p>
+        <!-- Add a slot here for custom content -->
+        <div class="custom-content">
+          <slot />
+        </div>
         <div class="card-actions justify-end">
           {
             tags &&
