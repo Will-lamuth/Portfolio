@@ -1,9 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
-
 ---
 
 
@@ -126,11 +123,18 @@ import createSlug from "../lib/createSlug"
       </HorizontalCard>
         <div class="divider my-0"></div>
         <HorizontalCard
-          title="Demo Project 2"
+          title="BrowFrame101"
           img="/post_img.webp"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-          url="#"
-        />
+          desc="BrowFrame101 is a custom webpage for a local beauty salon. It serves as a portfolio for the business, directing viewers with necessary business details."
+          url="/BrowFrame101"
+        >
+        <div class="card-wrap">
+          <div class="card hover:scale-[105%]">HTML</div>
+          <div class="card hover:scale-[105%]">Tailwind</div>
+          <div class="card hover:scale-[105%]">Javascript</div>
+          <div class="card hover:scale-[105%]">AWS</div>
+        </div>
+      </HorizontalCard>
         <div class="divider my-0"></div>
         <HorizontalCard
           title="MOVE4WELLNESS"
