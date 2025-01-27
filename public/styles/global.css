@@ -5,7 +5,7 @@
 html {
     scroll-behavior: smooth;
     overflow-y: auto;
-    overflow-x:hidden ;
+    overflow-x:hidden;
    }
 
 svg {
@@ -208,7 +208,7 @@ height: 50px;
 color: rgb(0, 0, 0);
 font-weight: bold;
 font-size: 25px;
-transition: 0.2s ease;
+transition: .5s ease;
 border-radius: 50%;
 user-select: none;
 background-color: rgba(128, 128, 128, 0.457);
@@ -226,6 +226,7 @@ text-align: center;
 .prev:hover, .next:hover {
 background-color: rgba(0, 0, 0, 0.8);
 color: white;
+transition: .5s ease;
 }
 
 /* The dots/bullets/indicators */

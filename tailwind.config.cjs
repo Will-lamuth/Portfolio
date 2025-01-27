@@ -2,7 +2,11 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				csutom:['"SF UI Text"', '"Helvetica Neue"', '"Segoe UI"', 'Oxygen', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [require("@tailwindcss/typography"),require("daisyui")],
 	daisyui: {
