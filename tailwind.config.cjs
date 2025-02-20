@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				csutom:['"SF UI Text"', '"Helvetica Neue"', '"Segoe UI"', 'Oxygen', 'sans-serif'],
+				custom:['"SF UI Text"', '"Helvetica Neue"', '"Segoe UI"', 'Oxygen', 'sans-serif'],
 			},
 		},
 	},

@@ -1,18 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     let slideIndex = 1;
-    // Poll until slides and dots exist in the DOM
-    const checkElements = setInterval(() => {
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
 
-      if (slides.length > 0 && dots.length > 0) {
-          clearInterval(checkElements); // Stop checking
-          showSlides(slideIndex); // Start the slideshow
-      } else {
-          console.log("Waiting for slides and dots to load...");
-      }
-    }, 100); // Check every 100ms
-  
+    showSlides();
     // Make the functions globally accessible
     window.plusSlides = function (n) {
       showSlides(slideIndex += n);
@@ -26,11 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let i;
       let slides = document.getElementsByClassName("mySlides");
       let dots = document.getElementsByClassName("dot");
-
-      if (slides.length === 0 || dots.length === 0) {
-        console.error("Slides or dots not found in the DOM.");
-        return;
-    }
   
       // Wrap around logic for the slides
       if (n > slides.length) {

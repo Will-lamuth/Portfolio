@@ -1,9 +1,13 @@
 ---
 // You can define props here if needed
 import { Image } from "astro:assets";
-import SideBarFooter from "../components//SideBarFooter.astro";
-const { activeItemID } = Astro.props;
+import SideBarFooter from "../components/SideBarFooter.astro";
 ---
+
+<script>
+  import {setupNavbar} from "../js/nav.js";
+  setupNavbar();
+</script>
 
 
 <div
@@ -14,7 +18,7 @@ const { activeItemID } = Astro.props;
       <label for="my-drawer" class="btn btn-square btn-ghost hover:bg-[#d6e1db] rounded-full">
         <Image class="mask mask-circle" format="png" width={100} height={100} src="/HeadShot.png" style="width: 100%; height: auto;" alt="Profile image" />
       </label>
-      <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#top">William Lamuth</a>
+      <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#top" id="william">William Lamuth</a>
       <SideBarFooter></SideBarFooter>
     </div>
 
@@ -37,8 +41,7 @@ const { activeItemID } = Astro.props;
   </div>
 </div>
 
-<!-- Fixed Dropdown Menu for Mobile, stays in view when scrolling -->
-<div id="navbar-default" class="hidden fixed top-16 left-0 w-full bg-base-100 shadow-lg z-40 lg:hidden">
+<div id="navbar-mobile" class="hidden fixed top-16 left-0 w-screen bg-base-100 shadow-lg z-40 lg:hidden">
   <ul class="flex flex-col items-center gap-2 p-4">
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#projects">Projects</a></li>
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#about">About</a></li>
@@ -46,21 +49,13 @@ const { activeItemID } = Astro.props;
   </ul>
 </div>
 
-<!-- Inline script block for navbar toggling -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('hamburger-menu');
-    const navbar = document.getElementById('navbar-default');
+<style>
+  
+</style>
 
-    if (toggleButton && navbar) {
-      toggleButton.addEventListener('click', function() {
-        navbar.classList.toggle('hidden');
-      });
-    } else {
-      console.error('Navbar or toggle button not found');
-    }
-  });
-</script>
+
+
+
 
 
 

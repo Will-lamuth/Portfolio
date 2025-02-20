@@ -3,9 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 ---
 
-
-
-<BaseLayout sideBarActiveItemID="home">
+<BaseLayout title="home">
   <section id="top">
     <div class="relative bg-[#8db8a8] bg-opacity-100 w-screen h-screen overflow-hidden">
       <svg class="svg-shadow" preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
@@ -46,8 +44,8 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       
       <div class="typewriter absolute inset-0 flex flex-col justify-center w-5/6 h-full mx-auto text-left">
         <h1 class="text-8xl font-bold text-white mb-[3rem]" id="name">Hi, I'm William Lamuth</h1>
-        <p class="text-3xl font-bold text-white w-4/6 mb-[3rem]" id="desc">Current Senior studying Computer Science at Salisbury University with an interest in creative Web Development.</p>
-        <button class="mb-[7rem] bg-black text-2xl rounded-full w-[10em] h-[3em] text-white font-bold hover:scale-[106%] shadow-xl transition ease-in-out hover:bg-[#292929]" onclick="scrollToSection('projects')">Projects</button>
+        <p class="text-3xl font-bold text-white w-4/6 mb-[3rem]" id="desc">Current Senior studying Computer Science at Salisbury University that enjoys <span id="web" class="text-[#292929]">Web Development.</span></p>
+        <button class="mb-[7rem] bg-black text-2xl rounded-full w-[10em] h-[3em] text-white font-bold hover:scale-[106%] shadow-xl transition ease-in-out hover:bg-[#292929]" onclick="scrollToSection('about')">Learn More</button>
       </div>
     
     </div>
@@ -57,17 +55,17 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     <div class="about">
       <div class="about-A">
         <div class="A-content w-4/6 mx-auto my-[5rem]">
-          <h1 class="animate relative text-4xl w-full font-bold mb-2 mb-7 text-[#292929]" id="about-header">About Me<span class="reveal"></span></h1>
+          <h1 class="animate relative text-4xl w-full font-bold mb-7 text-[#292929]" id="about-header">About Me<span class="reveal"></span></h1>
           <p class="animate mb-7 relative">
-            Im a current senior Computer Science major at Salisbury University, with a 
-            focus in AI and minoring in Math and Data Science. My interest include fullstack 
-            web development and AI.
+            I'm a senior Computer Science major at Salisbury University with a passion for web development, 
+            specializing in creating dynamic, user-friendly websites and applications. I enjoy transforming 
+            ideas into functional, visually engaging digital experiences.
             <span class="reveal"></span>
           </p>
 
           <p class="animate relative">
-            I've had the opportunity to work on a variety of exciting projects, from building 
-            custom web pages for local businesses to creating a GIS-based web app to visualize 
+            I've had the opportunity to help bring ideas to life, from building an
+            online business portfolio for a local business and creating a GIS-based web app to visualize 
             salinity data in the Chesapeake Bay. I'm eager to apply the knowledge and skills I've 
             gained to real-world challenges, while continuously seeking opportunities to learn and improve.
             <span class="reveal"></span>
@@ -92,6 +90,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
             <div class="animate-tool tool hover:scale-[105%]">Firebase</div>
             <div class="animate-tool tool hover:scale-[105%]">VS Code</div>
             <div class="animate-tool tool hover:scale-[105%]">AWS</div>
+            <div class="animate-tool tool hover:scale-[105%]">React</div>
           </div>
         </div>
       </div>
@@ -124,7 +123,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
         <div class="divider my-0"></div>
         <HorizontalCard
           title="BrowFrame101"
-          img="/post_img.webp"
+          img="/BrowFrame101page.png"
           desc="BrowFrame101 is a custom webpage for a local beauty salon. It serves as a portfolio for the business, directing viewers with necessary business details."
           url="/BrowFrame101"
         >

@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 ---
+<script src="src/js/carousel.js" defer></script>
 
 <BaseLayout title = "Projects">
 
     <section class="w-screen h-auto text-left">
         <div class="w-5/6 mx-auto flex justify-center flex-col items-center">
-          <h1 class="text-5xl w-full font-bold my-[3rem] text-center text-[#292929]">SaltCast</h1>
+          <h1 class="text-5xl w-full font-bold my-[3rem] text-center text-[#292929]" id="project-name">SaltCast</h1>
           <div class="flex justify-center mb-5">
             <a class="text-xl flex items-center justify-center text-center bg-[#3b6e5a] rounded-full w-[7em] h-[3em] text-white font-bold hover:scale-[106%] shadow-xl transition ease-in-out hover:bg-[#292929]" href="https://www.saltcast.io" target="_blank">Visit</a>
           </div>
@@ -29,14 +29,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <span class="dot" onclick="currentSlide(4)"></span>
           </div>
 
-          <p class="project-text mb-7 relative w-3/4 text-[#292929]">
+          <p class="project-text mb-7 md:w-[50vw] text-[#292929] sm:w-5/6">
             SaltCast is a web application tailored for professionals to assess water quality in the Chesapeake Bay area. 
             The platform features an interactive map showcasing water facilities and region-specific data, a curated collection
              of research articles authored by hydrology experts, and a membership system with email confirmation for exclusive access.
           </p>
 
-          <p class="project-text mb-7 relative w-3/4 text-[#292929]">
-            In a year-long capstone project, I collaborated with a team of three as the Front-End Lead. I designed 
+          <p class="project-text mb-7 md:w-[50vw] text-[#292929] sm:w-5/6">
+            In a year-long capstone project, I collaborated with a team of three as the Front-End developer. I designed 
             the framework using Figma and integrated the Google Maps API to develop an interactive map feature. The 
             implementation was carried out using HTML, CSS, and JavaScript, ensuring a user-friendly interface.
           </p>
@@ -45,3 +45,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </section>
 
 </BaseLayout>
+
+<style>
+  .project-text{
+    font-size: 1.25rem;
+  }
+
+  #project-name{
+    font-weight: 800;
+  }
+</style>

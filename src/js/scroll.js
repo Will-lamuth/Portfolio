@@ -32,8 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.querySelector('[data-collapse-toggle="navbar-default"]').addEventListener('click', function() {
-  const navbar = document.getElementById('navbar-default');
-  navbar.classList.toggle('hidden');
-});
-
