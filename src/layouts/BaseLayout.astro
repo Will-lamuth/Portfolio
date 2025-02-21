@@ -8,14 +8,14 @@ const {
   title = SITE_TITLE,
 } = Astro.props;
 ---
+<script>
+  import "../js/scroll.js"
+</script>
 
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
     <BaseHead title={title}/>
-    
-    <link rel="stylesheet" href="/src/styles/global.css" />
-    <script src="src/js/scroll.js" defer></script>
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
