@@ -11,7 +11,7 @@ import SideBarFooter from "../components/SideBarFooter.astro";
 
 
 <div
-  class="sticky top-0 z-30 flex h-18 w-full justify-center bg-opacity-100 backdrop-blur transition-all duration-100 bg-base-100 text-base-content shadow-lg"
+  class="sticky top-0 z-30 flex h-18 w-full justify-center bg-white transition-all shadow-md"
 >
   <div class="navbar w-5/6 max-w-[100vw] mx-auto">
     <div class="navbar-start">
@@ -21,9 +21,10 @@ import SideBarFooter from "../components/SideBarFooter.astro";
       <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#top" id="william">William Lamuth</a>
       <SideBarFooter></SideBarFooter>
     </div>
+    
 
     <!-- Hamburger Menu for mobile (lg:hidden) -->
-    <div class="navbar-end lg:hidden">
+    <div class="navbar-end lg:hidden w-full">
       <button id="hamburger-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
         <span class="sr-only">Open main menu</span>
         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -34,9 +35,10 @@ import SideBarFooter from "../components/SideBarFooter.astro";
 
     <!-- Menu links for large screens -->
     <div class="hidden lg:flex navbar-end">
+      
       <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#projects">Projects</a>
       <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#about">About</a>
-      <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/WilliamLamuthResume2025.pdf" target="_blank">Resume</a>
+      <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/Resume2025.pdf" target="_blank">Resume</a>
     </div>
   </div>
 </div>
@@ -45,7 +47,7 @@ import SideBarFooter from "../components/SideBarFooter.astro";
   <ul class="flex flex-col items-center gap-2 p-4">
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#projects">Projects</a></li>
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#about">About</a></li>
-    <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/WilliamLamuthResume2025.pdf" target="_blank">Resume</a></li>
+    <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/Resume2025.pdf" target="_blank">Resume</a></li>
   </ul>
 </div>
 

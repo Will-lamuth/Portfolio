@@ -160,7 +160,7 @@ a img.icon {
     white-space: nowrap;
     border-right: 5px solid;
     animation: typing 1.7s steps(18) forwards,
-    hideBorder 0s 1.35s forwards;
+    hideBorder 0s 1.5s forwards;
 }
 
 @keyframes typing{

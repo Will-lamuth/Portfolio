@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import SideBarFooter from "../components/SideBarFooter.astro";
 ---
 
 <BaseLayout title="home">
@@ -43,9 +44,12 @@ import HorizontalCard from "../components/HorizontalCard.astro";
       </svg>
       
       <div class="typewriter absolute inset-0 flex flex-col justify-center w-5/6 h-full mx-auto text-left">
-        <h1 class="text-8xl font-bold text-white mb-[3rem]" id="name">Hi, I'm William Lamuth</h1>
-        <p class="text-3xl font-bold text-white w-4/6 mb-[3rem]" id="desc">Current Senior studying Computer Science at Salisbury University that enjoys <span id="web" class="text-[#292929]">Web Development.</span></p>
-        <button class="mb-[7rem] bg-black text-2xl rounded-full w-[10em] h-[3em] text-white font-bold hover:scale-[106%] shadow-xl transition ease-in-out hover:bg-[#292929]" onclick="scrollToSection('about')">Learn More</button>
+        <h1 class="mb-[3rem] text-8xl font-bold text-white" id="name">Hi, I'm William Lamuth</h1>
+        <p class="mb-[3rem] text-3xl font-bold text-white w-4/6" id="desc">Current Senior studying Computer Science at Salisbury University that enjoys <span id="web" class="text-[#292929]">Web Development.</span></p>
+        <button class="md:mb-[7rem] sm:mb-0 bg-black text-2xl rounded-full w-[10em] h-[3em] text-white font-bold hover:scale-[106%] shadow-xl transition ease-in-out hover:bg-[#292929]" onclick="scrollToSection('about')">Learn More</button>
+        <div class="block sm:block md:hidden">
+          <SideBarFooter/>
+        </div>
       </div>
     
     </div>
@@ -57,17 +61,16 @@ import HorizontalCard from "../components/HorizontalCard.astro";
         <div class="A-content w-4/6 mx-auto my-[5rem]">
           <h1 class="animate relative text-4xl w-full font-bold mb-7 text-[#292929]" id="about-header">About Me<span class="reveal"></span></h1>
           <p class="animate mb-7 relative">
-            I'm a senior Computer Science major at Salisbury University with a passion for web development, 
-            specializing in creating dynamic, user-friendly websites and applications. I enjoy transforming 
-            ideas into functional, visually engaging digital experiences.
+            I'm a senior Computer Science major at Salisbury University, seeking opportunities in <b>web development</b>. 
+            With hands-on experience building <b>full-stack</b> applications using <b>HTML, CSS, React, Astro, MySQL, 
+              and AWS</b>, I enjoy turning ideas into functional, visually engaging digital experiences.
             <span class="reveal"></span>
           </p>
 
           <p class="animate relative">
-            I've had the opportunity to help bring ideas to life, from building an
-            online business portfolio for a local business and creating a GIS-based web app to visualize 
-            salinity data in the Chesapeake Bay. I'm eager to apply the knowledge and skills I've 
-            gained to real-world challenges, while continuously seeking opportunities to learn and improve.
+            I've brought ideas to the web, from developing an online business portfolio for a local
+            business to creating a GIS-based web app that visualizes salinity data in the Chesapeake Bay. 
+            I'm eager to apply my skills to real-world challenges while continuously learning and improving.
             <span class="reveal"></span>
           </p>
         </div>
