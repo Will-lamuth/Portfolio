@@ -11,7 +11,7 @@ import SideBarFooter from "../components/SideBarFooter.astro";
 
 
 <div
-  class="sticky top-0 z-30 flex h-18 w-full justify-center bg-white transition-all shadow-md"
+  class="sticky top-0 z-30 flex h-18 w-full justify-center bg-white transition-all sm:shadow-none md:shadow-md"
 >
   <div class="navbar w-5/6 max-w-[100vw] mx-auto">
     <div class="navbar-start">
@@ -21,7 +21,6 @@ import SideBarFooter from "../components/SideBarFooter.astro";
       <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#top" id="william">William Lamuth</a>
       <SideBarFooter></SideBarFooter>
     </div>
-    
 
     <!-- Hamburger Menu for mobile (lg:hidden) -->
     <div class="navbar-end lg:hidden w-full">
@@ -35,7 +34,6 @@ import SideBarFooter from "../components/SideBarFooter.astro";
 
     <!-- Menu links for large screens -->
     <div class="hidden lg:flex navbar-end">
-      
       <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#projects">Projects</a>
       <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#about">About</a>
       <a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/Resume2025.pdf" target="_blank">Resume</a>
@@ -43,7 +41,7 @@ import SideBarFooter from "../components/SideBarFooter.astro";
   </div>
 </div>
 
-<div id="navbar-mobile" class="hidden fixed top-16 left-0 w-screen bg-base-100 shadow-lg z-40 lg:hidden">
+<div id="navbar-mobile" class="sm:visible md:hidden absolute w-screen bg-base-100 shadow-lg translate-y-[-100%] z-10 ease-in-out">
   <ul class="flex flex-col items-center gap-2 p-4">
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#projects">Projects</a></li>
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#about">About</a></li>
@@ -53,6 +51,38 @@ import SideBarFooter from "../components/SideBarFooter.astro";
 
 <style>
   
+  .nav-up{
+    animation: moveUp 0.3s ease-in-out forwards;
+  }
+
+  .nav-down{
+    animation: moveDown 0.3s ease-in-out forwards;
+  }
+
+  @keyframes moveDown {
+    0%{
+      transform: translateY(-100%);
+      clip-path: ellipse(60% 100% at top);
+    }
+    70%{
+      clip-path: ellipse(100% 100% at top);
+    }
+    90%{
+      clip-path: ellipse(180% 100% at top);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes moveUp {
+    from{
+      transform: translateY(0);
+    }
+    to{
+      transform: translateY(-100%);
+    }
+  }
 </style>
 
 
