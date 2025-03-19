@@ -7,11 +7,17 @@ import SideBarFooter from "../components/SideBarFooter.astro";
 <script>
   import {setupNavbar} from "../js/nav.js";
   setupNavbar();
+
+  // toggle class for nav menu to toggle animation
+  const menu = document.getElementById('hamburger-menu');
+  menu?.addEventListener("click", function () {
+    menu.classList.toggle("open");
+  });
 </script>
 
 
 <div
-  class="sticky top-0 z-30 flex h-18 w-full justify-center bg-white transition-all sm:shadow-none md:shadow-md"
+  class="sticky top-0 z-30 flex h-18 w-full justify-center bg-white transition-all sm:shadow-none lg:shadow-md"
 >
   <div class="navbar w-5/6 max-w-[100vw] mx-auto">
     <div class="navbar-start">
@@ -23,13 +29,12 @@ import SideBarFooter from "../components/SideBarFooter.astro";
     </div>
 
     <!-- Hamburger Menu for mobile (lg:hidden) -->
-    <div class="navbar-end lg:hidden w-full">
-      <button id="hamburger-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-      </button>
+    <div class="navbar-end w-full flex items-start sm:visible lg:hidden">
+        <div id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
     </div>
 
     <!-- Menu links for large screens -->
@@ -41,7 +46,7 @@ import SideBarFooter from "../components/SideBarFooter.astro";
   </div>
 </div>
 
-<div id="navbar-mobile" class="sm:visible md:hidden absolute w-screen bg-base-100 shadow-lg translate-y-[-100%] z-10 ease-in-out">
+<div id="navbar-mobile" class="sm:visible lg:hidden absolute w-screen bg-base-100 shadow-lg translate-y-[-100%] z-10 ease-in-out">
   <ul class="flex flex-col items-center gap-2 p-4">
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#projects">Projects</a></li>
     <li><a class="btn btn-ghost normal-case text-lg hover:bg-[#d6e1db] rounded-full" href="/#about">About</a></li>
@@ -58,6 +63,20 @@ import SideBarFooter from "../components/SideBarFooter.astro";
   .nav-down{
     animation: moveDown 0.3s ease-in-out forwards;
   }
+
+  .nav-down a{
+    animation: fadeIn .7s ease-in-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from{
+      opacity: 20%;
+    }
+    to{
+      opacity: 100%;
+    }
+  }
+
 
   @keyframes moveDown {
     0%{
@@ -83,6 +102,88 @@ import SideBarFooter from "../components/SideBarFooter.astro";
       transform: translateY(-100%);
     }
   }
+
+</style>
+
+
+ <!-- Hamburger animtion -->
+<style>
+
+  #hamburger-menu {
+  width: 25px;
+  height: auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#hamburger-menu span {
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin: 15%;
+  background: #0b795a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#hamburger-menu {
+}
+
+#hamburger-menu span:nth-child(1) {
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#hamburger-menu span:nth-child(2) {
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#hamburger-menu span:nth-child(3) {
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+
+#hamburger-menu.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger-menu.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#hamburger-menu.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 </style>
 
 

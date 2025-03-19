@@ -195,6 +195,9 @@ a img.icon {
         width: 100%;
     }
 
+}
+
+@media screen and (max-width: 1100px){
     .typewriter h1 {
         animation: none; /* Disable animation */
         width: 100%;     /* Make sure the text is fully shown */
